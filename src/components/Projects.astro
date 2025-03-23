@@ -1,0 +1,59 @@
+---
+import ReactJsIcon from "../icons/React.js.astro";
+
+const TAGS = {
+    REACT: {
+        name: "React.js",
+        class: "bg-[#0784b18c] text-white",
+        icon: ReactJsIcon
+    }
+}
+
+
+const PROJECTS = [
+  {
+    title: "American Chip",
+    description: "Created from scratch with a one-month deadline, focusing on task division within the team using Agile methodologies.",
+    link: "https://american-chip-git-dev-bigdogs.vercel.app/",
+    github: "https://github.com/bigdogs-dev/american-chip",
+    image: "/Projects/American-chip.webp",
+    tags: [TAGS.REACT],
+  },
+  {
+    title: "Project Two",
+    description: "Description for project two.",
+    link: "#",
+    github: "#",
+    image: "",
+    tags: [TAGS.REACT],
+  },
+  {
+    title: "Project Three",
+    description: "Description for project three.",
+    link: "#",
+    github: "#",
+    image: "",
+    tags: [TAGS.REACT],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, tags, description }) => (
+    <article class="project">
+      <h3 class="text-2xl font-semibold text-yellow-200 pb-2">{title}</h3>
+      <p class="text-lg pb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row pb-4">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class}  py-1 px-2`}>
+            <tag.icon class="size-4" />
+            {tag.name}  
+          </span>
+            </li>
+        ))}
+      </ul>
+      <img class="rounded shadow-2xl shadow-white/20" src={image} alt={`Captura de pantalla del Proyecto ${image}`} />
+    </article>
+  ))
+}
