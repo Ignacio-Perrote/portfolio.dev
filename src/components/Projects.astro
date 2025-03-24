@@ -1,59 +1,130 @@
 ---
+import GitHub from "../icons/GitHub.astro";
+import Link from "../icons/Link.astro";
 import ReactJsIcon from "../icons/React.js.astro";
+import LinkButton from "./LinkButton.astro";
+import JavaScriptIcon from "../icons/Javascript.astro";
+import ChakraUIIcon from "../icons/Chakra.astro";
+import PHPIcon from "../icons/PhpIcon.astro";
+import CSSIcon from "../icons/Css.astro";
 
 const TAGS = {
-    REACT: {
-        name: "React.js",
-        class: "bg-[#0784b18c] text-white",
-        icon: ReactJsIcon
-    }
-}
-
+  REACT: {
+    name: "React.js",
+    class: "bg-[#0784b18c] text-white",
+    icon: ReactJsIcon,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#7b6c28] text-white",
+    icon: JavaScriptIcon,
+  },
+  CHAKRA: {
+    name: "Chakra UI",
+    class: "bg-[#3197958c] text-white",
+    icon: ChakraUIIcon,
+  },
+  PHP: {
+    name: "Php",
+    class: "bg-[#35335d] text-white",
+    icon: PHPIcon,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-[#6985c1a3] text-white",
+    icon: CSSIcon,
+  },
+};
 
 const PROJECTS = [
+{
+    title: "Portfolio",
+    description: "Built my portfolio from scratch using Astro and tailwind.",
+    link: "#",
+    github: "#",
+    image: "",
+    tags: [TAGS.REACT],
+  },
   {
     title: "American Chip",
-    description: "Created from scratch with a one-month deadline, focusing on task division within the team using Agile methodologies.",
+    description:
+      "Created from scratch with a one-month deadline, focusing on task division within the team using Agile methodologies.",
     link: "https://american-chip-git-dev-bigdogs.vercel.app/",
     github: "https://github.com/bigdogs-dev/american-chip",
     image: "/Projects/American-chip.webp",
-    tags: [TAGS.REACT],
+    tags: [TAGS.REACT, TAGS.JAVASCRIPT, TAGS.CHAKRA],
   },
   {
-    title: "Project Two",
-    description: "Description for project two.",
-    link: "#",
-    github: "#",
-    image: "",
-    tags: [TAGS.REACT],
+    title: "Puna Bio",
+    description: "Designed and developed a modal-based contact form that streamlined client data entry and email submissions.",
+    link: "https://puna.bio/soybean",
+    image: "/Projects/Puna.Dossier.webp",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.CSS],
   },
   {
-    title: "Project Three",
-    description: "Description for project three.",
-    link: "#",
-    github: "#",
-    image: "",
+    title: "Onevan",
+    description: "Created my first project while taking a web developer course.",
+    link: "https://onevan.netlify.app/",
+    github: "https://github.com/Ignacio-Perrote/OneVan-Proyect",
+    image: "/Projects/Onevan.webp",
     tags: [TAGS.REACT],
   },
 ];
 ---
 
-{
-  PROJECTS.map(({ image, title, tags, description }) => (
-    <article class="project">
-      <h3 class="text-2xl font-semibold text-yellow-200 pb-2">{title}</h3>
-      <p class="text-lg pb-4 text-pretty">{description}</p>
-      <ul class="flex gap-x-4 flex-row pb-4">
-        {tags.map((tag) => (
-          <li>
-            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class}  py-1 px-2`}>
-            <tag.icon class="size-4" />
-            {tag.name}  
-          </span>
-            </li>
-        ))}
-      </ul>
-      <img class="rounded shadow-2xl shadow-white/20" src={image} alt={`Captura de pantalla del Proyecto ${image}`} />
-    </article>
-  ))
-}
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Project Image"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-100 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
+
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-lg text-xs items-center ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4 rounded-xs" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>

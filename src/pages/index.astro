@@ -1,16 +1,15 @@
 ---
+import Experience from "../components/Experience.astro";
+import Hero from "../components/Hero.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import TitleSection from "../components/TitleSection.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import ProfileCheck from "../icons/ProfileCheck.astro"
+import CodeIcon from "../icons/Code.astro";
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import Badge from "../components/Badge.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import LinkedInIcon from "../icons/LinkedIn.astro";
-import GitHubIcon from "../icons/GitHub.astro";
-import MailIcon from "../icons/Mail.astro";
-import SocialPill from "../components/SocialButtons.astro";
-import Experience from "../components/Experience.astro";
-import Briefcase from "../icons/Briefcase.astro";
-import CodeIcon from "../icons/Code.astro";
-import Projects from "../components/Projects.astro";
 ---
 
 <Layout
@@ -18,47 +17,12 @@ import Projects from "../components/Projects.astro";
   description="contrata a nacho para crear tu aplicación web. Desarrolador Web. Especializado en crear apliacaciones dinamicas e únicas"
 >
   <main class="px-4">
-    <SectionContainer class="py-36 pb-16">
-      <img
-        class="rounded-full size-12 mb-4"
-        src="https://media.licdn.com/dms/image/v2/D4D03AQF30JwHHzhdow/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729849115833?e=1747872000&v=beta&t=if0aW-FZ3fLgxTjyMJHUhacNlFpgpYyAWDojTLFIgxY"
-        alt="nacho-foto"
-      />
-      <h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-4 lg:pb-6">
-        Hey, I'm Nacho 🖐
-        <a
-          href="https://www.linkedin.com/in/ignacioperrote/"
-          class="flex justify-center items-center"
-          target="_blank"
-          rel="noopener"><Badge> Disponible para trabajar </Badge></a
-        >
-      </h1>
-      <h2 class="text-xl lg:text-2xl opacity-85 text-wrap max-w-[700px]">
-        <span
-          >+2 years of experience developing customer-centered responsive web
-          applications.</span
-        >
-        <span class="text-pink-200">
-          I have a keen eye for detail 
-        </span>
-        and specialize in front-end best practices.
-        <span class="text-yellow-200"> Based in Valencia, España. </span>
-      </h2>
-      <nav class="flex gap-4 pt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/ignacioperrote/">
-          <LinkedInIcon class="size-4 md:size-6" />
-          LinkedIn
-        </SocialPill>
-        <SocialPill href="https://github.com/Ignacio-Perrote">
-          <GitHubIcon class="size-4 md:size-6" />
-          GitHub
-        </SocialPill>
-        <SocialPill href="mailto:ignacioperrote@gmail.com">
-          <MailIcon class="size-4 md:size-6" />
-          ignacioperrote@gmail.com
-        </SocialPill>
-      </nav>
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+      </slot>
+    </Hero>
     </SectionContainer>
+    <div class="space-y-24">
     <SectionContainer id="experience">
       <h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
         <Briefcase class="size-4 md:size-6" />
@@ -66,12 +30,21 @@ import Projects from "../components/Projects.astro";
       </h2>
       <Experience />
     </SectionContainer>
-    <SectionContainer id="experience">
+
+    <SectionContainer id="projects">
       <h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
         <CodeIcon class="size-4 md:size-6" />
         Projects
       </h2>
       <Projects />
     </SectionContainer>
+    <SectionContainer id="sobre-mi">
+      <TitleSection>
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </TitleSection>
+      <AboutMe />
+    </SectionContainer>
+  </div>
   </main>
 </Layout>
