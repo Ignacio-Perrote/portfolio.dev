@@ -1,50 +1,21 @@
 ---
+import AboutMe from "../components/AboutMe.astro";
 import Experience from "../components/Experience.astro";
 import Hero from "../components/Hero.astro";
 import Projects from "../components/Projects.astro";
-import SectionContainer from "../components/SectionContainer.astro";
-import TitleSection from "../components/TitleSection.astro";
-import AboutMe from "../components/AboutMe.astro";
-import Briefcase from "../icons/Briefcase.astro";
-import ProfileCheck from "../icons/ProfileCheck.astro"
-import CodeIcon from "../icons/Code.astro";
 import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
+
 ---
 
 <Layout
   title="Porfolio de Nacho - Desarrolador y programador web con 2 años de experiencia"
   description="contrata a nacho para crear tu aplicación web. Desarrolador Web. Especializado en crear apliacaciones dinamicas e únicas"
 >
-  <main class="px-4">
-    <SectionContainer class="py-16 md:py-36">
-      <Hero>
-      </slot>
-    </Hero>
-    </SectionContainer>
-    <div class="space-y-24">
-    <SectionContainer id="experience">
-      <h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
-        <Briefcase class="size-4 md:size-6" />
-        Experience
-      </h2>
-      <Experience />
-    </SectionContainer>
+  <Hero />
+  <Experience />
+    <Projects />
+  
+    
+    <AboutMe />
 
-    <SectionContainer id="projects">
-      <h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
-        <CodeIcon class="size-4 md:size-6" />
-        Projects
-      </h2>
-      <Projects />
-    </SectionContainer>
-    <SectionContainer id="sobre-mi">
-      <TitleSection>
-        <ProfileCheck class="size-8" />
-        Sobre mí
-      </TitleSection>
-      <AboutMe />
-    </SectionContainer>
-  </div>
-  </main>
 </Layout>

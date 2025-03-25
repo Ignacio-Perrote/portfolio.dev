@@ -1,0 +1,16 @@
+---
+type Props = {
+  id: string;
+};
+const { id } = Astro.props;
+---
+
+<section id={id} class="flex scroll-mt-8 flex-col gap-8">
+  <header class="flex items-center mb-4 gap-2">
+    <div class="[&_svg]:size-10 [&_svg]:shrink-0">
+      <slot name="icon" />
+    </div>
+    <slot name="title" />
+  </header>
+  <slot />
+</section>

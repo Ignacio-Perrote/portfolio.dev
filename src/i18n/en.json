@@ -1,0 +1,97 @@
+{
+  "SEO": {
+    "TITLE": "Frontend Developer with over 2 years of experience",
+    "DESCRIPTION": "I'm a web developer with experience in web development. Discover my projects, from static projects to modern applications.",
+    "IMAGE_ALT": "Preview of my software development portfolio.",
+    "KEYWORDS": "Ignacio Perrote, Nacho.dl, frontend developer, web development, mobile development, JavaScript, React, Next.js, HTML, CSS, Tailwind CSS, UI/UX, Chakra UI, PHP"
+  },
+  "OPEN_GRAPH": {
+    "TEXT_1": "Hello, I'm",
+    "TEXT_2": "Frontend Developer",
+    "TEXT_3": "Based in",
+    "TEXT_4": "Spain",
+    "FOOTNOTE": "Nacho.dl | Portfolio"
+  },
+  "LINK": {
+    "LINKEDIN": "Nacho's LinkedIn, it will open in a new tab.",
+    "GITHUB": "Nacho's GitHub, it will open in a new tab."
+  },
+  "TIMELINE": {
+    "PRESENT": "Present"
+  },
+  "MENU": {
+    "TITLE": "Menu",
+    "OPEN": "Open menu.",
+    "CLOSE": "Close menu."
+  },
+  "HERO": {
+    "H1": "Hello <span>🖐</span>, I'm <strong>Nacho</strong> <br aria-hidden=\"true\"/> <strong>Frontend Developer</strong> <br aria-hidden=\"true\" /> Based in Valencia, <strong>Spain</strong>.",
+    "IMAGE_ALT": "nacho.dl."
+  },
+  "SECTION": {
+    "EXPERIENCE": {
+      "TITLE": "Work experience",
+      "SHORT_TITLE": "Experience",
+      "EXAMPLES": [
+        {
+          "TITLE": "Frontend Developer",
+          "SUBTITLE": " Metadata S.L - Valencia, Spain",
+          "DESCRIPTION": "Contributed to the creation of a component package using React, designed to be used across different epics by multiple teams. The components were documented and visualized in Storybook. Designed and structured screens. Achieved 95% test coverage through end-to-end testing with Cypress. Validated and documented errors following Agile methodologies in Jira and Bitbucket, optimizing the incident resolution workflow. Collaborated with development and design teams to review and enhance UI components, ensuring high fidelity to Figma designs."
+        },      
+        {
+          "TITLE": "Frontend Developer - Valencia, Spain",
+          "SUBTITLE": "Bigdogs",
+          "DESCRIPTION": "Developed web interfaces using React.js, JavaScript, HTML, CSS, and Framer Motion. Reduced the agreed-upon development quota with the team by introducing reusable components and customizing elements using Next.js and Chakra UI. Create animations and interactivity using Framer Motion, enhancing the user experience."
+        }           
+      ]
+    },
+    "PROJECTS": {
+      "TITLE": "Projects",
+      "EXAMPLES": [
+        {
+          "LABEL": "Repository of the project Portfolio, it will open in a new tab.",
+          "SUBTITLE": "Official website",
+          "DESCRIPTION": "Built my portfolio from scratch using Astro and tailwind.",
+          "IMAGE_ALT": "Screenshot of the website of Portfolio."
+        },      
+        {
+          "LABEL": "Repository of the project American Chip, it will open in a new tab.",
+          "SUBTITLE": "American Chip ",
+          "DESCRIPTION": "Created from scratch with a one-month deadline, focusing on task division within the team using Agile methodologies.",
+          "IMAGE_ALT": "Screenshot of American Chip website."
+        },
+        {
+          "LABEL": "Repository of the project Puna Bio, it will open in a new tab.",
+          "SUBTITLE": "Puna Bio ",
+          "DESCRIPTION": "Designed and developed a modal-based contact form that streamlined client data entry and email submissions.",
+          "IMAGE_ALT": "Screenshot of Puna Bio website."
+        },
+        {
+          "LABEL": "Repository of the project Onevan, it will open in a new tab.",
+          "SUBTITLE": "Onevan",
+          "DESCRIPTION": "Created my first project while taking a web developer course.",
+          "IMAGE_ALT": "Screenshot of Onevan website."
+        }
+      ]
+    },
+    
+    "ABOUT": {
+      "TITLE": "About me",
+      "IMAGE_ALT": "Profile picture of Ignacio Perrote.",
+      "P1": "My name is Ignacio Perrote, although my friends call me Nacho. I am from Córdoba, Argentina, and currently live in Valencia, Spain. I started my programming career in 2023 when I had the opportunity to train and collaborate at my brother's development company, Bigdogs 🐶. I am currently <strong>seeking a new challenge where I can leverage my knowledge</strong>",
+      "P2": "Some of my projects include <strong>creating modals or components <s/trong> in already initiated applications and <strong>developing and testing websites</strong> from scratch."
+    }
+  },
+  "FOOTER": {
+    "TEXT": "Designed and developed with",
+    "FACE_EMOJI": "face",
+    "CONNECTOR": "and",
+    "ROCK_EMOJI": "rock"
+  },
+  "ERROR_404": {
+    "CODE": "Error 404",
+    "TITLE": "Page not found",
+    "TEXT": "Hello! We're sorry, but we couldn't find what you're looking for. Please check that the address is correct.",
+    "LINK": "Back to the home page"
+  }
+}

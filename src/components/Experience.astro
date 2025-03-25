@@ -1,27 +1,42 @@
 ---
+import { getI18N } from "@/i18n";
+import Briefcase from "../icons/Briefcase.astro";
 import ExperiencieItems from "./ExperiencieItems.astro";
+
+import TitleSection from "./TitleSection.astro";
+import SectionContainer from "./ui/SectionContainer.astro";
+import Timeline from "./ui/Timeline.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
 
 const EXPERIENCE = [
   {
-    date: "January 2024 - February 2025",
-    title: "Frontend Developer - Metadata S.L - Valencia, Spain",
-    description:
-      "Contributed to the creation of a component package using React, designed to be used across different epics by multiple teams. The components were documented and visualized in Storybook. Designed and structured screens. Achieved 95% test coverage through end-to-end testing with Cypress. Validated and documented errors following Agile methodologies in Jira and Bitbucket, optimizing the incident resolution workflow. Collaborated with development and design teams to review and enhance UI components, ensuring high fidelity to Figma designs.",
+    title: i18n.SECTION.EXPERIENCE.EXAMPLES[0].TITLE,
+    subtitle: i18n.SECTION.EXPERIENCE.EXAMPLES[0].SUBTITLE,
+    date: {
+      from: new Date(2024, 1),
+      to: new Date(2025, 2),
+    },
+    description: i18n.SECTION.EXPERIENCE.EXAMPLES[0].DESCRIPTION,
   },
   {
-    date: "January 2023 - January 2025",
-    title: "Frontend Developer - Bigdogs - Valencia, Spain",
-    description:
-      "Developed web interfaces using React.js, JavaScript, HTML, CSS, and Framer Motion. Reduced the agreed-upon development quota with the team by introducing reusable components and customizing elements using Next.js and Chakra UI. Create animations and interactivity using Framer Motion, enhancing the user experience.  ",
+    title: i18n.SECTION.EXPERIENCE.EXAMPLES[1].TITLE,
+    subtitle: i18n.SECTION.EXPERIENCE.EXAMPLES[1].SUBTITLE,
+    date: {
+      from: new Date(2023, 6),
+      to: new Date(2025, 1),
+    },
+    description: i18n.SECTION.EXPERIENCE.EXAMPLES[1].DESCRIPTION,
   },
 ];
 ---
 
-<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-2.75 pl-2">
-    {EXPERIENCE.map((exp) => (
-        <li class="mb-10 ms-4">
-          <ExperiencieItems {...exp}/>
-        </li>
-      ))}
- 
-</ol>
+<SectionContainer id="experience">
+  <Briefcase slot="icon" />
+  <TitleSection slot="title">
+    <span class="sm:hidden">{i18n.SECTION.EXPERIENCE.SHORT_TITLE}</span>
+    <span class="hidden sm:block">{i18n.SECTION.EXPERIENCE.TITLE}</span>
+    </TitleSection>
+  <Timeline experience={EXPERIENCE} month />
+</SectionContainer>
