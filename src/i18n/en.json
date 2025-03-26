@@ -36,12 +36,12 @@
         {
           "TITLE": "Frontend Developer",
           "SUBTITLE": " Metadata S.L - Valencia, Spain",
-          "DESCRIPTION": "Contributed to the creation of a component package using React, designed to be used across different epics by multiple teams. The components were documented and visualized in Storybook. Designed and structured screens. Achieved 95% test coverage through end-to-end testing with Cypress. Validated and documented errors following Agile methodologies in Jira and Bitbucket, optimizing the incident resolution workflow. Collaborated with development and design teams to review and enhance UI components, ensuring high fidelity to Figma designs."
+          "DESCRIPTION": "Contributed to the creation of <strong>components package using React</strong>, designed to be used across different proyects by multiple teams. Designed and structured screens. Achieved 95% test coverage through end-to-end testing with <strong>Cypress</strong>. Validated and documented errors following Agile methodologies in <strong>Jira and Bitbucket</strong>, optimizing the incident resolution workflow. Collaborated with development and design teams to review and enhance UI components, ensuring high fidelity to <strong>Figma designs</strong>."
         },      
         {
-          "TITLE": "Frontend Developer - Valencia, Spain",
-          "SUBTITLE": "Bigdogs",
-          "DESCRIPTION": "Developed web interfaces using React.js, JavaScript, HTML, CSS, and Framer Motion. Reduced the agreed-upon development quota with the team by introducing reusable components and customizing elements using Next.js and Chakra UI. Create animations and interactivity using Framer Motion, enhancing the user experience."
+          "TITLE": "Frontend Developer",
+          "SUBTITLE": "Bigdogs - Valencia, Spain",
+          "DESCRIPTION": "Developed web interfaces using <strong>React.js, JavaScript, HTML, CSS, and Framer Motion</strong>. Reduced the agreed-upon development quota with the team by introducing reusable components and customizing elements using <strong>Next.js and Chakra UI</strong>. Create animations and interactivity using Framer Motion, enhancing the user experience."
         }           
       ]
     },
@@ -79,7 +79,7 @@
       "TITLE": "About me",
       "IMAGE_ALT": "Profile picture of Ignacio Perrote.",
       "P1": "My name is Ignacio Perrote, although my friends call me Nacho. I am from Córdoba, Argentina, and currently live in Valencia, Spain. I started my programming career in 2023 when I had the opportunity to train and collaborate at my brother's development company, Bigdogs 🐶. I am currently <strong>seeking a new challenge where I can leverage my knowledge</strong>",
-      "P2": "Some of my projects include <strong>creating modals or components <s/trong> in already initiated applications and <strong>developing and testing websites</strong> from scratch."
+      "P2": "Some of my projects include <strong>creating modals or components </strong> in already initiated applications and <strong>developing and testing websites</strong> from scratch."
     }
   },
   "FOOTER": {

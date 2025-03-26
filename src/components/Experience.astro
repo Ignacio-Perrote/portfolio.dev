@@ -1,11 +1,10 @@
 ---
 import { getI18N } from "@/i18n";
 import Briefcase from "../icons/Briefcase.astro";
-import ExperiencieItems from "./ExperiencieItems.astro";
 
 import TitleSection from "./TitleSection.astro";
+import ExperienceTimeline from "./ui/ExperienceTimeline.astro";
 import SectionContainer from "./ui/SectionContainer.astro";
-import Timeline from "./ui/Timeline.astro";
 
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
@@ -38,5 +37,5 @@ const EXPERIENCE = [
     <span class="sm:hidden">{i18n.SECTION.EXPERIENCE.SHORT_TITLE}</span>
     <span class="hidden sm:block">{i18n.SECTION.EXPERIENCE.TITLE}</span>
     </TitleSection>
-  <Timeline experience={EXPERIENCE} month />
+  <ExperienceTimeline experience={EXPERIENCE} month />
 </SectionContainer>

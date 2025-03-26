@@ -24,13 +24,12 @@ const { description, title } = Astro.props;
   </head>
   <body class="relative text-black dark:text-white">
     <div
-      class="absolute min-h-screen top-0 bottom-0 z-[-2] w-screen bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,#c585c64f,rgba(255,255,255,0))]"
+      class="absolute min-h-screen top-0 bottom-0 z-[-2] w-screen bg-[radial-gradient(ellipse_80%_80%_at_40%_-26%,#22545d4f,rgba(10,10,10,1))]"
     >
     </div>
-
     <Header />
     <div class="mx-auto max-w-6xl px-2 md:px-4">
-      <main class="flex flex-col gap-20 px-4 py-16 md:py-36 pb-16 md:px-16">
+      <main class="flex flex-col gap-40 px-4 py-16 md:py-36 pb-16 md:px-16">
         <slot />
       </main>
     </div>
@@ -41,9 +40,10 @@ const { description, title } = Astro.props;
 <style is:global>
   :root {
     color-scheme: light dark;
-    --color-primary: #fffce9;
-    --color-secondary: #dddad2;
-    --color-tertiary: #e0c340;
+    --color-primary: #f0f0f0;
+    --color-secondary: #ff508c;
+    --color-tertiary: #07ffc9;
+    --bg-transparent: #07ffc92d;
   }
   html {
     font-family: "Onest Variable", system-ui, sans-serif;
