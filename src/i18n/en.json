@@ -39,12 +39,12 @@
           "TITLE": "Frontend Developer",
           "SUBTITLE": " Metadata S.L - Valencia, Spain",
           "DESCRIPTION": "Contributed to the creation of <strong>components package using React</strong>, designed to be used across different proyects by multiple teams. Designed and structured screens. Achieved 95% test coverage through end-to-end testing with <strong>Cypress</strong>. Validated and documented errors following Agile methodologies in <strong>Jira and Bitbucket</strong>, optimizing the incident resolution workflow. Collaborated with development and design teams to review and enhance UI components, ensuring high fidelity to <strong>Figma designs</strong>."
-        },      
+        },
         {
           "TITLE": "Frontend Developer",
           "SUBTITLE": "Bigdogs - Valencia, Spain",
           "DESCRIPTION": "Developed web interfaces using <strong>React.js, JavaScript, HTML, CSS, and Framer Motion</strong>. Reduced the agreed-upon development quota with the team by introducing reusable components and customizing elements using <strong>Next.js and Chakra UI</strong>. Create animations and interactivity using Framer Motion, enhancing the user experience."
-        }           
+        }
       ]
     },
     "PROJECTS": {
@@ -55,7 +55,7 @@
           "SUBTITLE": "Official website",
           "DESCRIPTION": "Built my portfolio from scratch using Astro and tailwind.",
           "IMAGE_ALT": "Screenshot of the website of Portfolio."
-        },      
+        },
         {
           "LABEL": "Repository of the project American Chip, it will open in a new tab.",
           "SUBTITLE": "American Chip ",
@@ -76,7 +76,6 @@
         }
       ]
     },
-    
     "ABOUT": {
       "TITLE": "About me",
       "IMAGE_ALT": "Profile picture of Ignacio Perrote.",

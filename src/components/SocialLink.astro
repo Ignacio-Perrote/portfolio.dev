@@ -1,44 +1,44 @@
 ---
-import type { HTMLAttributes } from "astro/types";
-import { getI18N } from "@/i18n";  // Importa i18n
-import LinkedInIcon from "@/icons/LinkedIn.astro";
-import GitHubIcon from "@/icons/GitHub.astro";
-import MailIcon from "@/icons/Mail.astro";
+import type { HTMLAttributes } from 'astro/types'
+import { getI18N } from '@/i18n' // Importa i18n
+import LinkedInIcon from '@/icons/LinkedIn.astro'
+import GitHubIcon from '@/icons/GitHub.astro'
+import MailIcon from '@/icons/Mail.astro'
 
 // Obtén el i18n basado en el idioma actual
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 
-type Props = HTMLAttributes<"a"> & {
-  icon: "LinkedIn" | "GitHub" | "Mail"; 
-};
+type Props = HTMLAttributes<'a'> & {
+  icon: 'LinkedIn' | 'GitHub' | 'Mail'
+}
 
-const { icon, class: className, ...props } = Astro.props;
+const { icon, class: className, ...props } = Astro.props
 
 const iconLinks = {
   LinkedIn: {
-    href: "https://www.linkedin.com/in/ignacioperrote/",
-    ariaLabel: i18n.LINK.LINKEDIN, 
+    href: 'https://www.linkedin.com/in/ignacioperrote/',
+    ariaLabel: i18n.LINK.LINKEDIN,
     Icon: LinkedInIcon
   },
   GitHub: {
-    href: "https://github.com/ignacioperrote",
-    ariaLabel: i18n.LINK.GITHUB, 
+    href: 'https://github.com/ignacioperrote',
+    ariaLabel: i18n.LINK.GITHUB,
     Icon: GitHubIcon
   },
   Mail: {
-    href: "mailto:ignacio@perrote.com",
-    ariaLabel: i18n.LINK.MAIL,  
+    href: 'mailto:ignacio@perrote.com',
+    ariaLabel: i18n.LINK.MAIL,
     Icon: MailIcon
   }
-};
+}
 
-const { href, ariaLabel, Icon } = iconLinks[icon]; 
+const { href, ariaLabel, Icon } = iconLinks[icon]
 ---
 
 <a
-  aria-label={ariaLabel} 
-  href={href} 
+  aria-label={ariaLabel}
+  href={href}
   class={`flex items-center transition duration-300 ease-in-out hover:opacity-75 hover:scale-105 ${className}`}
   {...props}
 >

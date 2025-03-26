@@ -1,58 +1,57 @@
 ---
-import { getI18N } from "@/i18n";
-import { format } from "date-fns";
-import { enUS, es } from "date-fns/locale";
+import { getI18N } from '@/i18n'
+import { format } from 'date-fns'
+import { enUS, es } from 'date-fns/locale'
 
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 
 type Props = {
   experience: {
-    title: string;
-    subtitle: string;
+    title: string
+    subtitle: string
     date: {
-      from: Date;
-      to?: Date;
-    };
-    description?: string;
-  }[];
-  month?: boolean;
-};
+      from: Date
+      to?: Date
+    }
+    description?: string
+  }[]
+  month?: boolean
+}
 
-const { experience, month = false } = Astro.props;
+const { experience, month = false } = Astro.props
 
 function formatToDatetime(date: Date, month: boolean) {
-  const parts = [date.getFullYear().toString()];
+  const parts = [date.getFullYear().toString()]
 
-  if (month) parts.push(String(date.getMonth() + 1).padStart(2, "0"));
+  if (month) parts.push(String(date.getMonth() + 1).padStart(2, '0'))
 
-  return parts.join("-");
+  return parts.join('-')
 }
 
 function formatToDate(date: Date, month: boolean) {
-  return format(date, month ? "MMM yyyy" : "yyyy", {
-    locale:
-      currentLocale === "en" ? enUS : currentLocale === "es" ? es : undefined,
-  });
+  return format(date, month ? 'MMM yyyy' : 'yyyy', {
+    locale: currentLocale === 'en' ? enUS : currentLocale === 'es' ? es : undefined
+  })
 }
 ---
 
 <ol
   class:list={[
-    "md:before:absolute md:before:bottom-0 md:before:start-6 md:before:top-2 md:before:-ms-px md:before:w-0.5 md:before:bg-primary",
-    "relative flex flex-col gap-8 md:gap-12",
+    'md:before:absolute md:before:bottom-0 md:before:start-6 md:before:top-2 md:before:-ms-px md:before:w-0.5 md:before:bg-primary',
+    'relative flex flex-col gap-8 md:gap-12'
   ]}
 >
   {
     experience.map((exp) => (
       <li
         class:list={[
-          "md:before:absolute md:before:-start-6 md:before:top-2 md:before:-ms-2 md:before:size-4 md:before:rounded-full md:before:bg-secondary",
-          "relative gap-x-12 gap-y-4 md:start-12 md:pb-2 md:pe-12",
-          { "grid md:grid-cols-5": exp.description },
+          'md:before:absolute md:before:-start-6 md:before:top-2 md:before:-ms-2 md:before:size-4 md:before:rounded-full md:before:bg-secondary',
+          'relative gap-x-12 gap-y-4 md:start-12 md:pb-2 md:pe-12',
+          { 'grid md:grid-cols-5': exp.description }
         ]}
       >
-        <div class:list={["flex flex-col", { "col-span-2": exp.description }]}>
+        <div class:list={['flex flex-col', { 'col-span-2': exp.description }]}>
           <h3 class="text-xl max-w-4xl text-balance font-semibold text-secondary tracking-wide">
             {exp.title}
           </h3>
@@ -62,17 +61,16 @@ function formatToDate(date: Date, month: boolean) {
               {formatToDate(exp.date.from, month)}
             </time>
             -
-            <time
-              datetime={exp.date.to && formatToDatetime(exp.date.to, month)}
-            >
-              {exp.date.to
-                ? formatToDate(exp.date.to, month)
-                : i18n.TIMELINE.PRESENT}
+            <time datetime={exp.date.to && formatToDatetime(exp.date.to, month)}>
+              {exp.date.to ? formatToDate(exp.date.to, month) : i18n.TIMELINE.PRESENT}
             </time>
           </span>
         </div>
         {exp.description && (
-          <p class="col-span-3 text-pretty text-primary font-light dark:[&>strong]:text-tertiary dark:[&>strong]:font-mono" set:html={exp.description}/>
+          <p
+            class="col-span-3 text-pretty text-primary font-light dark:[&>strong]:text-tertiary dark:[&>strong]:font-mono"
+            set:html={exp.description}
+          />
         )}
       </li>
     ))

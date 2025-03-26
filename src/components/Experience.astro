@@ -1,13 +1,13 @@
 ---
-import { getI18N } from "@/i18n";
-import Briefcase from "../icons/Briefcase.astro";
+import { getI18N } from '@/i18n'
+import Briefcase from '../icons/Briefcase.astro'
 
-import TitleSection from "./TitleSection.astro";
-import ExperienceTimeline from "./ui/ExperienceTimeline.astro";
-import SectionContainer from "./ui/SectionContainer.astro";
+import TitleSection from './TitleSection.astro'
+import ExperienceTimeline from './ui/ExperienceTimeline.astro'
+import SectionContainer from './ui/SectionContainer.astro'
 
-const { currentLocale } = Astro;
-const i18n = getI18N({ currentLocale });
+const { currentLocale } = Astro
+const i18n = getI18N({ currentLocale })
 
 const EXPERIENCE = [
   {
@@ -15,20 +15,20 @@ const EXPERIENCE = [
     subtitle: i18n.SECTION.EXPERIENCE.EXAMPLES[0].SUBTITLE,
     date: {
       from: new Date(2024, 1),
-      to: new Date(2025, 2),
+      to: new Date(2025, 2)
     },
-    description: i18n.SECTION.EXPERIENCE.EXAMPLES[0].DESCRIPTION,
+    description: i18n.SECTION.EXPERIENCE.EXAMPLES[0].DESCRIPTION
   },
   {
     title: i18n.SECTION.EXPERIENCE.EXAMPLES[1].TITLE,
     subtitle: i18n.SECTION.EXPERIENCE.EXAMPLES[1].SUBTITLE,
     date: {
       from: new Date(2023, 6),
-      to: new Date(2025, 1),
+      to: new Date(2025, 1)
     },
-    description: i18n.SECTION.EXPERIENCE.EXAMPLES[1].DESCRIPTION,
-  },
-];
+    description: i18n.SECTION.EXPERIENCE.EXAMPLES[1].DESCRIPTION
+  }
+]
 ---
 
 <SectionContainer id="experience">
@@ -36,6 +36,6 @@ const EXPERIENCE = [
   <TitleSection slot="title">
     <span class="sm:hidden">{i18n.SECTION.EXPERIENCE.SHORT_TITLE}</span>
     <span class="hidden sm:block">{i18n.SECTION.EXPERIENCE.TITLE}</span>
-    </TitleSection>
+  </TitleSection>
   <ExperienceTimeline experience={EXPERIENCE} month />
 </SectionContainer>
