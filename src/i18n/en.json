@@ -14,7 +14,8 @@
   },
   "LINK": {
     "LINKEDIN": "Nacho's LinkedIn, it will open in a new tab.",
-    "GITHUB": "Nacho's GitHub, it will open in a new tab."
+    "GITHUB": "Nacho's GitHub, it will open in a new tab.",
+    "MAIL": "Nacho's Mail, it will pop up."
   },
   "TIMELINE": {
     "PRESENT": "Present"
@@ -26,7 +27,8 @@
   },
   "HERO": {
     "H1": "Hello <span>🖐</span>, I'm <strong>Nacho</strong> <br aria-hidden=\"true\"/> <strong>Frontend Developer</strong> <br aria-hidden=\"true\" /> Based in Valencia, <strong>Spain</strong>.",
-    "IMAGE_ALT": "nacho.dl."
+    "IMAGE_ALT": "nacho.dl.",
+    "BADGE": "Disponible para trabajar"
   },
   "SECTION": {
     "EXPERIENCE": {
@@ -83,9 +85,9 @@
     }
   },
   "FOOTER": {
-    "TEXT": "Designed and developed with",
+    "TEXT": "Designed and developed",
+    "TEXT2": "Nacho.dl",
     "FACE_EMOJI": "face",
-    "CONNECTOR": "and",
     "ROCK_EMOJI": "rock"
   },
   "ERROR_404": {

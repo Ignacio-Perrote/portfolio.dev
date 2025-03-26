@@ -3,7 +3,9 @@ const personalImageAlt = "Ignacio Perrote";
 import Badge from "../components/Badge.astro";
 import SocialLink from "../components/SocialLink.astro";
 import GitHubIcon from "../icons/GitHub.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
 import LinkedInIcon from "../icons/LinkedIn.astro";
+import Mail from "../icons/Mail.astro";
 import MailIcon from "../icons/Mail.astro";
 import SectionContainer from "./ui/SectionContainer.astro";
 import { getI18N } from "@/i18n";
@@ -16,15 +18,9 @@ const i18n = getI18N({ currentLocale });
   <section class="flex flex-col md:flex-row-reverse items-center justify-between">
     <div class="flex flex-col items-center gap-4">
       <nav class="flex gap-4">
-        <SocialLink
-          href="https://www.linkedin.com/in/ignacioperrote/"
-          icon={LinkedInIcon}
-        />
-        <SocialLink
-          href="https://github.com/Ignacio-Perrote"
-          icon={GitHubIcon}
-        />
-        <SocialLink href="mailto:ignacioperrote@gmail.com" icon={MailIcon} />
+        <SocialLink icon="LinkedIn"/>
+        <SocialLink icon="GitHub" />
+        <SocialLink icon="Mail" />
       </nav>
       <a
         href="https://www.linkedin.com/in/ignacioperrote/"
@@ -32,7 +28,7 @@ const i18n = getI18N({ currentLocale });
         rel="noopener"
         class="flex items-center transition md:justify-center md:hover:scale-105"
       >
-        <Badge>Disponible para trabajar</Badge>
+        <Badge set:html={i18n.HERO.BADGE}/>
       </a>
     </div>
 

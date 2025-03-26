@@ -8,6 +8,7 @@ export default {
           primary: 'var(--color-primary)',
           secondary: 'var(--color-secondary)',
           tertiary: 'var(--color-tertiary)',
+          tranparent: 'var(--color-tranparent)',
         },
       },
     },

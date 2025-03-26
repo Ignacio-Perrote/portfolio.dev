@@ -1,5 +1,11 @@
 ---
-const currentYear = new Date().getFullYear()
+import { getI18N } from "@/i18n";
+import SocialLink from "./SocialLink.astro";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+const currentYear = new Date().getFullYear();
 ---
 
 <footer
@@ -10,19 +16,20 @@ const currentYear = new Date().getFullYear()
   >
     <span class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
       >© {currentYear}
-      <a href="https://www.linkedin.com/in/ignacioperrote/" class="hover:underline">Nacho.dl</a>. 🤘
+      {i18n.FOOTER.TEXT}
+      <span aria-label={i18n.FOOTER.FACE_EMOJI}>💻</span>
+     
+      <a
+        href="https://www.linkedin.com/in/ignacioperrote/"
+        class="hover:underline">{i18n.FOOTER.TEXT2}</a
+      >
+      <span aria-label={i18n.FOOTER.ROCK_EMOJI}>🤘</span>
     </span>
-    <ul
-      class="flex flex-wrap items-center mt-3 text-sm font-medium dark:text-white/90 sm:mt-0"
-    >
-      <li>
-        <a href="/#sobre-mi" class="hover:underline me-4 md:me-6">Sobre mí</a>
-      </li>
-      <li>
-        <a id="contacto" href="mailto:perrotedesign@gmail.com" class="hover:underline"
-          >Contacto</a
-        >
-      </li>
-    </ul>
+    <span></span>
+    <nav class="flex gap-4">
+      <SocialLink icon="LinkedIn" />
+      <SocialLink icon="GitHub" />
+      <SocialLink icon="Mail" />
+    </nav>
   </div>
 </footer>
