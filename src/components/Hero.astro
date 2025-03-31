@@ -1,22 +1,17 @@
 ---
 const personalImageAlt = 'Ignacio Perrote'
+import { getI18N } from '@/i18n'
 import Badge from '../components/Badge.astro'
 import SocialLink from '../components/SocialLink.astro'
-import GitHubIcon from '../icons/GitHub.astro'
-import LinkedIn from '../icons/LinkedIn.astro'
-import LinkedInIcon from '../icons/LinkedIn.astro'
-import Mail from '../icons/Mail.astro'
-import MailIcon from '../icons/Mail.astro'
 import SectionContainer from './ui/SectionContainer.astro'
-import { getI18N } from '@/i18n'
 
 const { currentLocale } = Astro
 const i18n = getI18N({ currentLocale })
 ---
 
 <SectionContainer id="hero">
-  <section class="flex flex-col md:flex-row-reverse items-center justify-between">
-    <div class="flex flex-col items-center gap-4">
+  <section class="flex gap-4 md:gap-0 items-start flex-col-reverse md:flex-row-reverse md:items-center justify-between">
+    <div class="flex sm:flex-col md:items-center gap-4">
       <nav class="flex gap-4">
         <SocialLink icon="LinkedIn" />
         <SocialLink icon="GitHub" />
