@@ -1,2 +1,2 @@
 My portfolio
-![image](https://github.com/user-attachments/assets/7f3ae64b-4834-45a1-b5ab-c5d534a1929c)
+![Portfolio ](https://github.com/user-attachments/assets/198120f9-cd9f-4f58-aa12-7660f5150239)
